@@ -1,0 +1,4 @@
+requests==2.24.0
+google-cloud-secret-manager
+google-cloud-bigquery
+google-cloud-storage
