@@ -19,7 +19,7 @@ def send_slack_message(wekbook_url, data):
     print('Response: ' + str(response.text))
     print('Response code: ' + str(response.status_code))
 
-def log_config(config):
+def set_and_log_config(config):
 
     config_str = json.dumps(config, indent=2)
 
@@ -38,3 +38,5 @@ def log_config(config):
     send_slack_message(config['slack_webhook_url'], slack_message_payload)
 
     print(config_str)
+
+    return config

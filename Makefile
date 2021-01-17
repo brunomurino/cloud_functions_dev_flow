@@ -47,6 +47,7 @@ run-dev:
 	-ti \
 	--rm \
 	--env ENV=dev \
+	--env SLACK_WEBHOOK_URL=$(SLACK_WEBHOOK_URL) \
 	-p 8080:8080 \
 	--mount type=bind,source="$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))"/$(NAME)/,target=/root/function/ \
 	--mount type=bind,source=/Users/brunomurino/.config/gcp/,target=/root/config/ \
