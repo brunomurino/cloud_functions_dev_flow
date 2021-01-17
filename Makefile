@@ -31,7 +31,8 @@ deploy: set-active-account
 	--runtime python38 \
 	--trigger-http \
 	--allow-unauthenticated \
-	--update-env-vars ENV=prod
+	--update-env-vars ENV=prod \
+	--update-env-vars JOB_NAME=$(NAME)
 
 build-dev:
 	docker build \
